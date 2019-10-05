@@ -54,15 +54,12 @@ And here. | Okay. | I think we get it.
 `;
     return (
       <div className="MarkdownPreviewer">
-        <textarea
-          name=""
-          id=""
-          className="markdown-input"
-          placeholder={placeholder}
-        ></textarea>
-        <div className="markdown-preview">
-          <Markdown className="markdown-inner">{placeholder}</Markdown>
-        </div>
+        <textarea name="" id="" className="markdown-input">
+          {placeholder}
+        </textarea>
+        {/* <div className="markdown-preview"> */}
+        <Markdown className="markdown-preview">{placeholder}</Markdown>
+        {/* </div> */}
       </div>
     );
   }
