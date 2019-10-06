@@ -1,0 +1,65 @@
+.Header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* padding: 1rem; */
+  padding-top: 1rem;
+  /* color: #fff; */
+  font-size: 1rem;
+  color: #cbd5e0;
+  background-color: #09141c;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  height: 100%;
+  flex: 1;
+}
+
+.header-left {
+  display: flex;
+  align-items: stretch;
+}
+
+.App-title {
+  display: inline;
+  text-align: center;
+  border-bottom: 5px solid rgba(203, 93, 157, 0.8);
+}
+
+.clear-tab,
+.GitHub-tab {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.GitHub-tab,
+.clear-btn {
+  padding: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #172b3a;
+  color: inherit;
+}
+
+.clear-btn {
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid #172b3a;
+  font-size: 1rem;
+}
+
+.GitHub-logo {
+  height: 1rem;
+  margin-right: 0.3rem;
+}
+
+.GitHub-link {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}

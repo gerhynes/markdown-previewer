@@ -1,13 +1,12 @@
 import React from "react";
+import Header from "./Header";
 import MarkdownPreviewer from "./MarkdownPreviewer";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-heading">
-        <h1 className="App-title">Preview Your Markdown</h1>
-      </header>
+      <Header />
       <MarkdownPreviewer />
     </div>
   );

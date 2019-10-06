@@ -5,18 +5,5 @@
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
-}
-
-.App-heading {
-  text-align: center;
-  padding: 1rem;
-  /* color: #fff; */
-  font-size: 1rem;
-  color: #cbd5e0;
-  background-color: #172b3a;
-}
-
-.App-title {
-  display: inline;
-  border-bottom: 5px solid rgba(203, 93, 157, 0.8);
+  /* outline: 1px solid red; */
 }
