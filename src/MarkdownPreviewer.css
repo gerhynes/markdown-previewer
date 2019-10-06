@@ -19,7 +19,8 @@
   height: 100%;
   border: none;
   background: #0f202d;
-  color: #fff;
+  /* color: #fff; */
+  color: rgb(41, 185, 115);
   overflow: hidden;
 }
 
@@ -29,7 +30,8 @@
   height: 100%;
   overflow: hidden;
   background: #172b3a;
-  color: #fff;
+  /* color: #fff; */
+  color: #cbd5e0;
 }
 
 .markdown-input:hover,

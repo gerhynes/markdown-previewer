@@ -5,8 +5,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-title">
-        <h1>Preview Your Markdown</h1>
+      <header className="App-heading">
+        <h1 className="App-title">Preview Your Markdown</h1>
       </header>
       <MarkdownPreviewer />
     </div>

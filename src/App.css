@@ -7,9 +7,16 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.App-title {
+.App-heading {
   text-align: center;
   padding: 1rem;
-  color: #fff;
+  /* color: #fff; */
+  font-size: 1rem;
+  color: #cbd5e0;
   background-color: #172b3a;
+}
+
+.App-title {
+  display: inline;
+  border-bottom: 5px solid rgba(203, 93, 157, 0.8);
 }
