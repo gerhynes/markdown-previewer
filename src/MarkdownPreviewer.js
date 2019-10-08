@@ -3,12 +3,8 @@ import Markdown from "markdown-to-jsx";
 import "./MarkdownPreviewer.css";
 
 export default class MarkdownPreviewer extends Component {
-  state = {
-    md: ""
-  };
-
-  render() {
-    const placeholder = `# Welcome to my React Markdown Previewer!
+  static defaultProps = {
+    placeholderMD: `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
@@ -51,14 +47,36 @@ And here. | Okay. | I think we get it.
 1. But the list goes on...
 - Even if you use dashes or asterisks.
 
-`;
+`
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      md: this.props.placeholderMD
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({
+      md: e.target.value
+    });
+  }
+
+  render() {
     return (
       <div className="MarkdownPreviewer">
-        <textarea name="" id="" className="markdown-input">
-          {placeholder}
-        </textarea>
+        <textarea
+          name="markdown"
+          id="markdown-input"
+          className="markdown-input"
+          value={this.state.md}
+          onChange={this.handleChange}
+        ></textarea>
         {/* <div className="markdown-preview"> */}
-        <Markdown className="markdown-preview">{placeholder}</Markdown>
+        <Markdown options={{ forceBlock: true }} className="markdown-preview">
+          {this.state.md}
+        </Markdown>
         {/* </div> */}
       </div>
     );
