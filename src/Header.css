@@ -1,5 +1,4 @@
 .Header {
-  /* position: fixed; */
   display: flex;
   width: 100%;
   font-size: 1rem;
@@ -30,6 +29,14 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+.clear-btn {
+  border-top: 3px solid #bd2c00;
+}
+
+.GitHub-link {
+  border-top: 3px solid #66bf62;
 }
 
 .header-center {

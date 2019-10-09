@@ -1,11 +1,13 @@
 import React from "react";
 import "./Header.css";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header className="Header">
       <div className="header-left">
-        <button className="clear-btn">Clear Markdown</button>
+        <button className="clear-btn" onClick={props.clearMD}>
+          Clear Markdown
+        </button>
 
         <a
           href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf"

@@ -57,6 +57,13 @@ And here. | Okay. | I think we get it.
       md: this.props.placeholderMD
     };
     this.handleChange = this.handleChange.bind(this);
+    this.clearMD = this.clearMD.bind(this);
+  }
+
+  clearMD() {
+    this.setState({
+      md: ""
+    });
   }
 
   handleChange(e) {
@@ -68,7 +75,7 @@ And here. | Okay. | I think we get it.
   render() {
     return (
       <div className="MarkdownPreviewer">
-        <Header />
+        <Header clearMD={this.clearMD} />
         <main className="markdown-main">
           <textarea
             name="markdown"
