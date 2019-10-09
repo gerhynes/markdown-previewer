@@ -7,5 +7,6 @@
 
 .Footer a {
   text-decoration: none;
-  color: #cb5d9dcc;
+  color: #cbd5e0;
+  border-bottom: 2px solid rgba(203, 93, 157, 0.8);
 }
