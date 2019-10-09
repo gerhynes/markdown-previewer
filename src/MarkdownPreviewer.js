@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Markdown from "markdown-to-jsx";
+import Header from "./Header";
 import "./MarkdownPreviewer.css";
 
 export default class MarkdownPreviewer extends Component {
@@ -66,18 +67,19 @@ And here. | Okay. | I think we get it.
   render() {
     return (
       <div className="MarkdownPreviewer">
-        <textarea
-          name="markdown"
-          id="markdown-input"
-          className="markdown-input"
-          value={this.state.md}
-          onChange={this.handleChange}
-        ></textarea>
-        {/* <div className="markdown-preview"> */}
-        <Markdown options={{ forceBlock: true }} className="markdown-preview">
-          {this.state.md}
-        </Markdown>
-        {/* </div> */}
+        <Header />
+        <main className="markdown-main">
+          <textarea
+            name="markdown"
+            id="markdown-input"
+            className="markdown-input"
+            value={this.state.md}
+            onChange={this.handleChange}
+          ></textarea>
+          <Markdown options={{ forceBlock: true }} className="markdown-preview">
+            {this.state.md}
+          </Markdown>
+        </main>
       </div>
     );
   }

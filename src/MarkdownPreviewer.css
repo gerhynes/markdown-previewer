@@ -2,7 +2,7 @@
   outline: 1px solid red;
 } */
 
-.MarkdownPreviewer {
+.markdown-main {
   height: calc(100vh - 3.5rem);
   width: 100%;
   background: #172b3a;
@@ -32,6 +32,10 @@
   background: #172b3a;
   /* color: #fff; */
   color: #cbd5e0;
+}
+
+.markdown-preview > * {
+  margin-bottom: 1rem;
 }
 
 .markdown-input:hover,
