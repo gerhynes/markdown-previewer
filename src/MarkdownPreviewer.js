@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Markdown from "markdown-to-jsx";
 import Header from "./Header";
+import Footer from "./Footer";
 import "./MarkdownPreviewer.css";
 
 export default class MarkdownPreviewer extends Component {
@@ -80,6 +81,7 @@ And here. | Okay. | I think we get it.
             {this.state.md}
           </Markdown>
         </main>
+        <Footer />
       </div>
     );
   }
