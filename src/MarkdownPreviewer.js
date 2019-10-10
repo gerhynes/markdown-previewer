@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 import Markdown from "markdown-to-jsx";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -6,7 +7,7 @@ import "./MarkdownPreviewer.css";
 
 export default class MarkdownPreviewer extends Component {
   static defaultProps = {
-    placeholderMD: `# Welcome to my React Markdown Previewer!
+    placeholderMarkdown: `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
@@ -54,38 +55,43 @@ And here. | Okay. | I think we get it.
   constructor(props) {
     super(props);
     this.state = {
-      md: this.props.placeholderMD
+      currentMarkdown: this.props.placeholderMarkdown,
+      copied: false
     };
     this.handleChange = this.handleChange.bind(this);
-    this.clearMD = this.clearMD.bind(this);
+    this.clearMarkdown = this.clearMarkdown.bind(this);
   }
 
-  clearMD() {
+  clearMarkdown() {
     this.setState({
-      md: ""
+      currentMarkdown: ""
     });
   }
 
   handleChange(e) {
     this.setState({
-      md: e.target.value
+      currentMarkdown: e.target.value
     });
   }
 
   render() {
     return (
       <div className="MarkdownPreviewer">
-        <Header clearMD={this.clearMD} />
+        <Header
+          clearMarkdown={this.clearMarkdown}
+          currentMarkdown={this.state.currentMarkdown}
+          copied={this.state.copied}
+        />
         <main className="markdown-main">
           <textarea
             name="markdown"
             id="markdown-input"
             className="markdown-input"
-            value={this.state.md}
+            value={this.state.currentMarkdown}
             onChange={this.handleChange}
           ></textarea>
           <Markdown options={{ forceBlock: true }} className="markdown-preview">
-            {this.state.md}
+            {this.state.currentMarkdown}
           </Markdown>
         </main>
         <Footer />
