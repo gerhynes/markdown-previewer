@@ -23,7 +23,7 @@ export default function Header(props) {
           rel="noopener noreferrer"
           className="GitHub-link"
         >
-          GitHub MD Cheatsheet
+          GitHub Markdown Cheatsheet
         </a>
       </div>
     </header>
