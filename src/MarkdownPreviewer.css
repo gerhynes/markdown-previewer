@@ -38,30 +38,40 @@
 }
 
 /* Markdown Styles */
-code {
+
+.markdown-preview p,
+.markdown-preview li,
+.markdown-preview table,
+.markdown-preview code,
+.markdown-preview pre {
+  font-size: 1.125rem;
+}
+
+.markdown-preview a {
+  color: #ffffff4d;
+}
+
+.markdown-preview pre code {
+  display: block;
+}
+
+.markdown-preview code {
   color: #ffffff4d;
   background: #24435b;
-  padding: 2px 4px;
+  padding: 0.3rem;
 }
 
-pre {
-  color: #ffffff4d;
-  padding: 5px 0 5px 5px;
-}
-
-table {
+.markdown-preview table {
   border-collapse: collapse;
 }
 
-td,
-th {
-  border: 1px solid #c6cbd1;
-  /* padding-left: 5px;
-  padding-right: 5px; */
+.markdown-preview td,
+.markdown-preview th {
+  border: 1px solid #ffffff4d;
   padding: 0.5rem;
 }
 
-blockquote {
+.markdown-preview blockquote {
   font-size: 1.25rem;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
