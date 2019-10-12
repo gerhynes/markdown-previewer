@@ -15,13 +15,12 @@
   height: 100%;
   border: none;
   background: #0f202d;
-
-  color: rgb(41, 185, 115);
+  color: #29b973;
   overflow: hidden;
 }
 
 .markdown-preview {
-  padding: 2rem;
+  padding: 0.5rem 1rem 1rem 2rem;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -40,12 +39,13 @@
 
 /* Markdown Styles */
 code {
-  background: hsl(206, 43%, 25%);
+  color: #ffffff4d;
+  background: #24435b;
   padding: 2px 4px;
 }
 
 pre {
-  color: rgba(255, 255, 255, 0.3);
+  color: #ffffff4d;
   padding: 5px 0 5px 5px;
 }
 
@@ -55,16 +55,16 @@ table {
 
 td,
 th {
-  /* border: 2px solid rgba(255, 255, 255, 0.3); */
   border: 1px solid #c6cbd1;
-  padding-left: 5px;
-  padding-right: 5px;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  padding: 0.5rem;
 }
 
 blockquote {
   font-size: 1.25rem;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
-  border-left: 5px solid #c6cbd1;
+  border-left: 3px solid #c6cbd1;
   padding-left: 1rem;
 }
