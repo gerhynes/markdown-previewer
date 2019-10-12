@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Markdown from "markdown-to-jsx";
+// import Markdown from "markdown-to-jsx";
+import ReactMarkdown from "react-markdown/with-html";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./MarkdownPreviewer.css";
@@ -76,11 +77,12 @@ And here. | Okay. | I think we get it.
   }
 
   render() {
+    const { currentMarkdown } = this.state;
     return (
       <div className="MarkdownPreviewer">
         <Header
           clearMarkdown={this.clearMarkdown}
-          currentMarkdown={this.state.currentMarkdown}
+          currentMarkdown={currentMarkdown}
           copied={this.state.copied}
         />
         <main className="markdown-main">
@@ -88,12 +90,18 @@ And here. | Okay. | I think we get it.
             name="markdown"
             id="markdown-input"
             className="markdown-input"
-            value={this.state.currentMarkdown}
+            value={currentMarkdown}
             onChange={this.handleChange}
           ></textarea>
-          <Markdown options={{ forceBlock: true }} className="markdown-preview">
+          {/* <Markdown options={{ forceBlock: true }} className="markdown-preview">
             {this.state.currentMarkdown}
-          </Markdown>
+          </Markdown> */}
+
+          <ReactMarkdown
+            source={currentMarkdown}
+            className="markdown-preview"
+            escapeHtml={false}
+          />
         </main>
         <Footer />
       </div>
