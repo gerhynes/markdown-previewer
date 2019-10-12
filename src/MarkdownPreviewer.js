@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { CopyToClipboard } from "react-copy-to-clipboard";
 import Markdown from "markdown-to-jsx";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -11,7 +10,9 @@ export default class MarkdownPreviewer extends Component {
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
-  
+
+> Blockquote
+
 Heres some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
