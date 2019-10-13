@@ -6,53 +6,45 @@ import "./MarkdownPreviewer.css";
 
 export default class MarkdownPreviewer extends Component {
   static defaultProps = {
-    placeholderMarkdown: `# Welcome to my React Markdown Previewer!
+    placeholderMarkdown: `# Start with a Main Heading
+## Then a sub-heading
+### More headings are always useful, right?
 
-## This is a sub-heading...
-### And here's some other cool stuff:
-
-> Blockquote
-
-Heres some code, \`<div></div>\`, between 2 backticks.
+Short code cnippets, \`<div></div>\`, go between two backticks.
 
 \`\`\`
-// this is multi-line code:
+// Multi-line code is fenced into code blocks:
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
-}
+  <Markdown>
+    {this.state.currentMarkdown}
+  </Markdown>
 \`\`\`
   
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+Use **bold** for emphasis, not _italics_, and never **_both_**.
 
-There's also [links](https://www.freecodecamp.com), and
-> Block Quotes!
+What's the shortcut for ~~crossing out text~~?
 
-And if you want to get really crazy, even tables:
+Markdown handles [links](https://www.freecodecamp.com) pretty easily, and images too 
+![React Logo w/ Text](https://goo.gl/Umyytc)
 
-Wild Header | Crazy Header | Another Header?
------------- | ------------- | ------------- 
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.
+> It also does blockquotes
 
-- And of course there are lists.
-  - Some are bulleted.
+And even tables:
+
+| Feature   | Supports |
+| --------- | ------- |
+| tables    | ✔ |
+| alignment | ✔ |
+
+- You can have lists.
+  - Unordered lists.
      - With different indentation levels.
         - That look like this.
 
 
-1. And there are numbererd lists too.
-1. Use just 1s if you want! 
-1. But the list goes on...
-- Even if you use dashes or asterisks.
-
-![React Logo w/ Text](https://goo.gl/Umyytc)
-
+1. And also numbererd lists.
+1. Did you know you can just use 1s if you want?
+1. But Markdown will keep couting
 `
   };
   constructor(props) {
