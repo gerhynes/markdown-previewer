@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "insane": "^2.6.2",
     "marked": "^0.7.0",
     "react": "^16.10.1",
     "react-copy-to-clipboard": "^5.0.1",

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import marked from "marked";
+import insane from "insane";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./MarkdownPreviewer.css";
@@ -16,7 +17,7 @@ Short code cnippets, \`<div></div>\`, go between two backticks.
 // Multi-line code is fenced into code blocks:
 
   <Markdown>
-    {this.state.currentMarkdown}
+    {props.currentMarkdown}
   </Markdown>
 \`\`\`
   
@@ -44,7 +45,7 @@ And even tables:
 
 1. And also numbererd lists.
 1. Did you know you can just use 1s if you want?
-1. But Markdown will keep couting
+1. But Markdown will keep counting
 `
   };
   constructor(props) {
@@ -89,18 +90,11 @@ And even tables:
             value={this.state.currentMarkdown}
             onChange={this.handleChange}
           ></textarea>
-          {/* <Markdown
-            options={{ forceBlock: true }}
-            className="markdown-preview"
-            id="preview"
-          >
-            {this.state.currentMarkdown}
-          </Markdown> */}
           <div
             className="markdown-preview"
             id="preview"
             dangerouslySetInnerHTML={{
-              __html: marked(this.state.currentMarkdown)
+              __html: insane(marked(this.state.currentMarkdown))
             }}
           ></div>
         </main>
