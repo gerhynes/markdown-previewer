@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Markdown from "markdown-to-jsx";
+import marked from "marked";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./MarkdownPreviewer.css";
@@ -51,6 +51,8 @@ And here. | Okay. | I think we get it.
 1. But the list goes on...
 - Even if you use dashes or asterisks.
 
+![React Logo w/ Text](https://goo.gl/Umyytc)
+
 `
   };
   constructor(props) {
@@ -76,6 +78,10 @@ And here. | Okay. | I think we get it.
   }
 
   render() {
+    // Render carriage returns as line breaks
+    marked.setOptions({
+      breaks: true
+    });
     return (
       <div className="MarkdownPreviewer">
         <Header
@@ -86,14 +92,25 @@ And here. | Okay. | I think we get it.
         <main className="markdown-main">
           <textarea
             name="markdown"
-            id="markdown-input"
+            id="editor"
             className="markdown-input"
             value={this.state.currentMarkdown}
             onChange={this.handleChange}
           ></textarea>
-          <Markdown options={{ forceBlock: true }} className="markdown-preview">
+          {/* <Markdown
+            options={{ forceBlock: true }}
+            className="markdown-preview"
+            id="preview"
+          >
             {this.state.currentMarkdown}
-          </Markdown>
+          </Markdown> */}
+          <div
+            className="markdown-preview"
+            id="preview"
+            dangerouslySetInnerHTML={{
+              __html: marked(this.state.currentMarkdown)
+            }}
+          ></div>
         </main>
         <Footer />
       </div>
