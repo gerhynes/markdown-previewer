@@ -115,7 +115,25 @@
   .header-left,
   .header-right {
     display: none;
-    transition: display 300ms ease;
+    padding-bottom: 1rem;
+  }
+
+  .copy-btn,
+  .clear-btn,
+  .GitHub-link {
+    border-radius: 10rem;
+  }
+
+  .clear-btn {
+    border: 3px solid #bd2c00;
+  }
+
+  .GitHub-link {
+    border: 3px solid #66bf62;
+  }
+
+  .copy-btn {
+    border: 3px solid #6e5494;
   }
 
   .header-left.show,
