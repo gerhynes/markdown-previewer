@@ -9,7 +9,7 @@ export default function Header(props) {
         <button className="clear-btn" onClick={props.clearMarkdown}>
           Clear Markdown
         </button>
-        <CopyToClipboard text={props.currentMD}>
+        <CopyToClipboard text={props.currentMarkdown}>
           <button className="copy-btn">Copy to clipboard</button>
         </CopyToClipboard>
       </div>

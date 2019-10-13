@@ -1,0 +1,16 @@
+.markdown-editor {
+  font-family: "Source Code Pro", sans-serif;
+  padding: 2.5rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #0f202d;
+  color: #29b973;
+  overflow: hidden;
+}
+
+.markdown-editor:hover,
+.markdown-editor:active,
+.markdown-editor:focus {
+  overflow-y: scroll;
+}

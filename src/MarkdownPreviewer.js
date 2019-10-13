@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import marked from "marked";
-import insane from "insane";
 import Header from "./Header";
+import Editor from "./Editor";
+import Preview from "./Preview";
 import Footer from "./Footer";
 import "./MarkdownPreviewer.css";
 
@@ -71,32 +71,20 @@ And even tables:
   }
 
   render() {
-    // Render carriage returns as line breaks
-    marked.setOptions({
-      breaks: true
-    });
+    const { currentMarkdown, copied } = this.state;
     return (
       <div className="MarkdownPreviewer">
         <Header
           clearMarkdown={this.clearMarkdown}
-          currentMarkdown={this.state.currentMarkdown}
-          copied={this.state.copied}
+          currentMarkdown={currentMarkdown}
+          copied={copied}
         />
         <main className="markdown-main">
-          <textarea
-            name="markdown"
-            id="editor"
-            className="markdown-input"
-            value={this.state.currentMarkdown}
-            onChange={this.handleChange}
-          ></textarea>
-          <div
-            className="markdown-preview"
-            id="preview"
-            dangerouslySetInnerHTML={{
-              __html: insane(marked(this.state.currentMarkdown))
-            }}
-          ></div>
+          <Editor
+            currentMarkdown={currentMarkdown}
+            handleChange={this.handleChange}
+          />
+          <Preview currentMarkdown={currentMarkdown} />
         </main>
         <Footer />
       </div>
