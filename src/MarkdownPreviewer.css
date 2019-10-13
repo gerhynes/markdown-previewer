@@ -7,3 +7,9 @@
   align-items: center;
   overflow: auto;
 }
+
+@media (max-width: 756px) {
+  .markdown-main {
+    flex-direction: column;
+  }
+}

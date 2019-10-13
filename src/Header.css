@@ -58,3 +58,20 @@
   border-bottom: 5px solid rgba(203, 93, 157, 0.8);
   margin: 1rem 0;
 }
+
+@media (max-width: 756px) {
+  .Header {
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  .header-left,
+  .header-center,
+  .header-right {
+    justify-content: center;
+  }
+
+  .header-center {
+    order: -1;
+  }
+}
