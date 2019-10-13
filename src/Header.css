@@ -72,7 +72,7 @@
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
-  background: #fff;
+  background: rgb(255, 255, 255, 0.5);
   transition: all 0.5s ease-out;
 }
 
@@ -89,15 +89,17 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
+  .menu-btn {
+    visibility: visible;
+  }
+
   .header-nav {
     flex-direction: column;
-    height: 0;
-    transition: height 300ms ease;
   }
 
   .header-nav.show {
-    height: 50vh;
+    position: fixed;
   }
 
   .header-left,
@@ -110,7 +112,14 @@
     order: -1;
   }
 
-  .menu-btn {
-    visibility: visible;
+  .header-left,
+  .header-right {
+    display: none;
+    transition: display 300ms ease;
+  }
+
+  .header-left.show,
+  .header-right.show {
+    display: flex;
   }
 }

@@ -13,8 +13,8 @@ export default function Header(props) {
         <div class="menu-btn__line"></div>
         <div class="menu-btn__line"></div>
       </div>
-      <nav className={`header-nav ${props.isMenuOpen ? "show" : ""}`}>
-        <div className="header-left">
+      <nav className="header-nav">
+        <div className={`header-left ${props.isMenuOpen ? "show" : ""}`}>
           <button className="clear-btn" onClick={props.clearMarkdown}>
             Clear Markdown
           </button>
@@ -25,7 +25,7 @@ export default function Header(props) {
         <div className="header-center">
           <h1 className="app-title ">Preview Your Markdown</h1>
         </div>
-        <div className="header-right">
+        <div className={`header-right ${props.isMenuOpen ? "show" : ""}`}>
           <a
             href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf"
             target="_blank"

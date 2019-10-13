@@ -11,7 +11,7 @@ export default class MarkdownPreviewer extends Component {
 ## Then a sub-heading
 ### More headings are always useful, right?
 
-Short code cnippets, \`<div></div>\`, go between two backticks.
+Short code snippets, \`<div></div>\`, go between two backticks.
 
 \`\`\`
 // Multi-line code is fenced into code blocks:
@@ -89,7 +89,7 @@ And even tables:
           isMenuOpen={isMenuOpen}
           toggleMenu={this.toggleMenu}
         />
-        <main className="markdown-main">
+        <main className={`markdown-main ${isMenuOpen ? "menu-open" : ""}`}>
           <Editor
             currentMarkdown={currentMarkdown}
             handleChange={this.handleChange}
