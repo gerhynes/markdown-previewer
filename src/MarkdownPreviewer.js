@@ -52,10 +52,18 @@ And even tables:
     super(props);
     this.state = {
       currentMarkdown: this.props.placeholderMarkdown,
+      isMenuOpen: false,
       copied: false
     };
     this.handleChange = this.handleChange.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
     this.clearMarkdown = this.clearMarkdown.bind(this);
+  }
+
+  toggleMenu() {
+    this.setState({
+      isMenuOpen: !this.state.isMenuOpen
+    });
   }
 
   clearMarkdown() {
@@ -71,13 +79,15 @@ And even tables:
   }
 
   render() {
-    const { currentMarkdown, copied } = this.state;
+    const { currentMarkdown, isMenuOpen, copied } = this.state;
     return (
       <div className="MarkdownPreviewer">
         <Header
           clearMarkdown={this.clearMarkdown}
           currentMarkdown={currentMarkdown}
           copied={copied}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={this.toggleMenu}
         />
         <main className="markdown-main">
           <Editor
