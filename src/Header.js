@@ -9,9 +9,9 @@ export default function Header(props) {
         className={`menu-btn ${props.isMenuOpen ? "close" : ""}`}
         onClick={props.toggleMenu}
       >
-        <div class="menu-btn__line"></div>
-        <div class="menu-btn__line"></div>
-        <div class="menu-btn__line"></div>
+        <div className="menu-btn__line"></div>
+        <div className="menu-btn__line"></div>
+        <div className="menu-btn__line"></div>
       </div>
       <nav className="header-nav">
         <div className={`header-left ${props.isMenuOpen ? "show" : ""}`}>
