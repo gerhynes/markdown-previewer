@@ -13,12 +13,11 @@ export default class MarkdownPreviewer extends Component {
 
 Short code snippets, \`<div></div>\`, go between two backticks.
 
-\`\`\`
+\`\`\`js
 // Multi-line code is fenced into code blocks:
-
-  <Markdown>
-    {props.currentMarkdown}
-  </Markdown>
+  function reverseString(str) {
+    return str.split("").reverse().join("");
+  }
 \`\`\`
   
 Use **bold** for emphasis, not _italics_, and never **_both_**.

@@ -38,9 +38,8 @@
 }
 
 .markdown-preview code {
-  color: #ffffff4d;
-  background: #24435b;
   padding: 0.3rem;
+  background: #23241f;
 }
 
 .markdown-preview table {
