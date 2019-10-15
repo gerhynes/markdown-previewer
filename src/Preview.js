@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import marked from "marked";
-// import insane from "insane";
 import { Remarkable } from "remarkable";
 import hljs from "highlight.js";
+import "highlight.js/styles/monokai-sublime.css";
 import "./Preview.css";
 
 export default class Preview extends Component {
