@@ -42,7 +42,7 @@ And even tables:
         - That look like this.
 
 
-1. And also numbererd lists.
+1. And also numbered lists.
 1. Did you know you can just use 1s if you want?
 1. But Markdown will keep counting
 `
